@@ -11,24 +11,12 @@ const httpLink = new HttpLink({
 })
 
 
-const afterwareLink = new ApolloLink((operation, forward) => forward(operation)
-  .map(response => {
-    const { response: { headers } } = operation.getContext()
-    const token = headers.get('x-token')
-
-    if (token) {
-      localStorage.setItem('token', token)
-    }
-
-    return response
-  }))
-
 const middlewareLink = new ApolloLink((operation, forward) => {
   const token = localStorage.getItem('token')
   if (token) {
     operation.setContext({
       headers: {
-        authorization: `Bearer ${token}`,
+        authorization: token,
       },
     })
   }
@@ -45,7 +33,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: ApolloLink.from([
     errorLink,
-    afterwareLink,
     middlewareLink,
     httpLink,
   ]),

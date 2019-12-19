@@ -1,21 +1,15 @@
 # DEV React-Apollo Starter
 
-This is a repository with starter code for new frontend web projects at DEV.
+### Getting Started
 
-**NOTE: When starting a project, update the title and provide a description here for the project. You should also put any engineering-specific information here that you think might be important for future engineers to know (quirks of an API, for example).**
-
-To start a new project built off of this repository, click the green "Use this Template" button.
+To start your project built off of this repository, click the **Fork** button in the top right of the github GUI. This will create a copy of this repository under your account. Share this repository with your team members so that everyone may work off of it.
 
 ### Running the project
 
 ```bash
 $ npm i
-$ npm run start
+$ npm run dev
 ```
-
-## Contributing to this project
-
-Please use the workflow and git conventions outlined [here](https://docs.google.com/document/d/1MJUp3kGXOG2ck8phtELk1Ph2AcBFZDMpM9j8dJTCeIw/edit?usp=sharing) when making contributions to this project. The guidelines are designed to increase the long term efficacy of the our engineering efforts, meaning the effort that goes into following these standards today will help save the engineers of tomorrow a considerable amount of time.
 
 ## Project Layout
 
@@ -60,9 +54,6 @@ project-repo-name
 │
 |   .eslintrc.json
 |   .gitignore
-|   .npmrc
-|   .prettierrc
-|   .travis.yml
 |   package-lock.json
 |   package.json
 |   README.md
@@ -114,7 +105,7 @@ Storybook is a tool that allows you to work on and view individual components wi
 
 #### Running Storybook
 
-In order to use story book you can simply run the following command
+In order to use Storybook you can simply run the following command
 
 ```bash
 $ npm run storybook
