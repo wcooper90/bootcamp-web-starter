@@ -19,8 +19,6 @@ This repository contains by the general frontend web file structure conventions 
 
 ```
 project-repo-name
-└───.github
-|
 └───.storybook
 |
 └───node_modules
@@ -60,10 +58,6 @@ project-repo-name
 ```
 
 ### Important Directories and Files
-
-- **.github**
-
-  - Used to store our PR and Issue templates, if you needed to create new templates or update the existing ones, they would go here.
 
 - **.storybook**
 
