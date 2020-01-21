@@ -17,7 +17,7 @@ const theme = {
   },
   fonts: {
     header: {
-      family: 'Courier New',
+      family: 'Montserrat, sans-serif',
       weight: 700,
     },
     body: {
