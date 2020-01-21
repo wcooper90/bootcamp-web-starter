@@ -1,0 +1,1 @@
+// allows the user to search for friends
