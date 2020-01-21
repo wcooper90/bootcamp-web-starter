@@ -19,7 +19,7 @@ export const Button = styled.button`
       position: relative;
       overflow: hidden;
       z-index: 1;
-      transition: 0.5s;
+      transition: 0.23s;
       margin: 1em;
 
   span {
@@ -31,7 +31,7 @@ export const Button = styled.button`
       border-radius: 50%;
       left: calc((var(--n) - 1) * 25%);
       transition: 0.5s;
-      transition-delay: calc((var(--n) - 1) * 0.1s);
+      transition-delay: calc((var(--n) - 1) * 0.07s);
       z-index: -1;
   }
 
