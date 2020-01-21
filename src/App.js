@@ -36,13 +36,13 @@ const App = () => (
               params={{
                 "particles": {
                     "number": {
-                        "value": 160,
+                        "value": 200,
                         "density": {
                             "enable": false
                         }
                     },
                     "size": {
-                        "value": 6,
+                        "value": 10,
                         "random": true,
                         "anim": {
                             "speed": 4,
@@ -54,7 +54,7 @@ const App = () => (
                     },
                     "move": {
                         "random": true,
-                        "speed": 1,
+                        "speed": 2,
                         "direction": "top",
                         "out_mode": "out"
                     }
@@ -72,8 +72,8 @@ const App = () => (
                     },
                     "modes": {
                         "bubble": {
-                            "distance": 250,
-                            "duration": 2,
+                            "distance": 150,
+                            "duration": 1.5,
                             "size": 0,
                             "opacity": 0
                         },

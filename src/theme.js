@@ -10,7 +10,7 @@ const theme = {
     purple: '#7137c8',
     offBlack: '#333333',
     fonts: {
-      header: 'rgba(0,0,EE,0.8)',
+      header: '#333333',
       navlink: '#ffdb2d',
       button: '#000000',
     },
