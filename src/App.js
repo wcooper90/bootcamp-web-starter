@@ -8,8 +8,9 @@ import Home from './containers/Home'
 import Navbar from './containers/Navbar'
 import Friends from './containers/Friends'
 import Logout from './containers/logout'
+import Welcome from './containers/Welcome'
 import PositiveMessages from './containers/PositiveMessages'
-import Particles from 'react-particles-js';
+import ParticlesBackground from './UI/particles.js';
 
 
 
@@ -27,63 +28,13 @@ const App = () => (
           <div className="App">
             <Navbar />
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route path="/home" component={Home} />
+              <Route exact path="/" component={Welcome} />
               <Route path="/friends" component={Friends} />
               <Route path="/positiveMessages" component={PositiveMessages} />
               <Route path="/logout" component={Logout} />
             </Switch>
-            <Particles
-              params={{
-                "particles": {
-                    "number": {
-                        "value": 200,
-                        "density": {
-                            "enable": false
-                        }
-                    },
-                    "size": {
-                        "value": 10,
-                        "random": true,
-                        "anim": {
-                            "speed": 4,
-                            "size_min": 2
-                        }
-                    },
-                    "line_linked": {
-                        "enable": false,
-                    },
-                    "move": {
-                        "random": true,
-                        "speed": 2,
-                        "direction": "top",
-                        "out_mode": "out"
-                    }
-                },
-                "interactivity": {
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "bubble"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "repulse"
-                        }
-                    },
-                    "modes": {
-                        "bubble": {
-                            "distance": 150,
-                            "duration": 1.5,
-                            "size": 0,
-                            "opacity": 0
-                        },
-                        "repulse": {
-                            "distance": 400,
-                            "duration": 4
-                        }
-                    }
-                }
-            }} />
+            <ParticlesBackground />
           </div>
         </ApolloProvider>
       </AppWrapper>
