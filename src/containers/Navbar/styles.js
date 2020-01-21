@@ -16,6 +16,7 @@ export const NavLink = styled(link).attrs(({ theme }) => ({
   },
   exact: true,
 }))`
+  &active: { color: ${({ theme }) => theme.colors.orange} }
   font-family: ${({ theme }) => theme.fonts.header.family};
   font-weight: ${({ theme }) => theme.fonts.header.weight};
   font-size: 22px;

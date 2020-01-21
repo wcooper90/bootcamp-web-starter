@@ -1,14 +1,17 @@
 import React from 'react'
 import { Container, NavLink } from './styles'
+import { Button } from '../../UI/button.js'
 
 const Navbar = () => (
   <Container>
     <img src='./cheermeuplogo.png' alt='bruh' width='160px'/>
     <br/>
-    <NavLink to="/" src='./cheermeuplogo.png' alt='bruh' width='140px'></NavLink>
+    <NavLink to='/'></NavLink>
     <NavLink to="/">Home</NavLink>
     <NavLink to="/friends">Friends</NavLink>
     <NavLink to="/PositiveMessages">Positive Messages</NavLink>
+    <NavLink to="/logout">Logout</NavLink>
+
   </Container>
 )
 
