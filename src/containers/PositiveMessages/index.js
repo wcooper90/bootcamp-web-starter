@@ -7,7 +7,7 @@ import {withRouter} from 'react-router';
 
 
 
-const Friends = () => {
+const PositiveMessages = () => {
 
   return (
     <div>
@@ -25,4 +25,4 @@ const Friends = () => {
   )
 }
 
-export default withRouter(Friends)
+export default withRouter(PositiveMessages)
