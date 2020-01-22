@@ -26,15 +26,35 @@ const App = () => (
       <AppWrapper>
         <ApolloProvider client={client}>
           <div className="App">
-            <Navbar />
-            <Switch>
-              <Route path="/home" component={Home} />
-              <Route exact path="/" component={Welcome} />
-              <Route path="/friends" component={Friends} />
-              <Route path="/positiveMessages" component={PositiveMessages} />
-              <Route path="/logout" component={Logout} />
-            </Switch>
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%"
+            }}
+          >
             <ParticlesBackground />
+            <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%"
+                }}
+              >
+                <Navbar />
+                <Switch>
+                  <Route path="/home" component={Home} />
+                  <Route exact path="/" component={Welcome} />
+                  <Route path="/friends" component={Friends} />
+                  <Route path="/positiveMessages" component={PositiveMessages} />
+                  <Route path="/logout" component={Logout} />
+                </Switch>
+              </div>
+            </div>
           </div>
         </ApolloProvider>
       </AppWrapper>

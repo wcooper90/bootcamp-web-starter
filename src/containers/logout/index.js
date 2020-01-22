@@ -1,24 +1,28 @@
 import React from 'react'
-import { Container } from './styles'
-import ParticlesBg from "particles-bg";
 import ReactTextTransition, { presets } from "react-text-transition";
 import {withRouter} from 'react-router';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
 
 
 const Logout = () => {
 
   return (
-    <div>
-      <ReactTextTransition
-              text="bruh "
-              spring={presets.molasses}
-              className="big"
-              delay={800}
-              inline
-            />
-      you just logged out. you fool.
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <div>
+            bruh1
+          </div>
+        </Col>
+        <Col>
+          <div>
+            bruh2
+          </div>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container } from './styles'
-import ParticlesBg from "particles-bg";
 import { BigText } from '../../UI/bigtext.js'
 import ReactTextTransition, { presets } from "react-text-transition";
 import {withRouter} from 'react-router';
