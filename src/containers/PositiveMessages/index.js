@@ -5,7 +5,8 @@ import { BigText } from '../../UI/bigtext.js'
 import {withRouter} from 'react-router';
 
 
-const PositiveMessages = () => (
+const PositiveMessages = () => {
+  return (
   <div>
     <BigText>
       <ReactTextTransition
@@ -19,5 +20,6 @@ const PositiveMessages = () => (
     </BigText>
   </div>
 )
+}
 
 export default PositiveMessages
