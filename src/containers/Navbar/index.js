@@ -7,7 +7,7 @@ const Navbar = () => (
     <img src='./cheermeuplogo.png' alt='bruh' width='160px'/>
     <br/>
     <NavLink to='/'></NavLink>
-    <NavLink to="/">Home</NavLink>
+    <NavLink to="/home">Home</NavLink>
     <NavLink to="/friends">Friends</NavLink>
     <NavLink to="/PositiveMessages">Positive Messages</NavLink>
     <NavLink to="/logout">Logout</NavLink>

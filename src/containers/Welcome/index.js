@@ -5,12 +5,14 @@ import ReactTextTransition, { presets } from "react-text-transition";
 import { NavLink as link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Show } from './styles'
 
 
 const Welcome = () => {
 
 
   return (
+    <div>
     <Container>
       <Row>
         <Col>
@@ -50,16 +52,19 @@ const Welcome = () => {
           <br />
           <br />
           <br />
-          <Button>
-            <nav>
-              <a href="/home">Take me --></a><span></span><span></span><span></span><span></span>
-            </nav>
-          </Button>
+          <Show>
+            <Button id='mybutton'>
+              <nav>
+                <a href="/home">Cheer me up!</a><span></span><span></span><span></span><span></span>
+              </nav>
+            </Button>
+          </Show>
         </Col>
         <Col>
         </Col>
       </Row>
     </Container>
+    </div>
   )
 }
 
