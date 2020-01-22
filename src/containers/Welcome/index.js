@@ -54,7 +54,7 @@ const Welcome = () => {
           <br />
           <br />
           <Show>
-            <Button text = 'Cheer me up!'id='mybutton' />
+            <Button text='Cheer me up!'id='mybutton' />
           </Show>
         </Col>
         <Col>
