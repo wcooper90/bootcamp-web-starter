@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactTextTransition, { presets } from 'react-text-transition'
 import { NavLink as link } from 'react-router-dom'
-<<<<<<< HEAD
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Show } from './styles'
@@ -66,42 +65,5 @@ const Welcome = () => {
     </div>
   )
 }
-=======
-import { BigText, BigText2 } from '../../UI/bigtext'
-import Button from '../../UI/Button'
-
-
-const Welcome = () => (
-  <div>
-    <BigText>
-      <ReactTextTransition
-        text="Welcome "
-        spring={presets.molasses}
-        className="big"
-        delay={800}
-        inline
-      />
-    </BigText>
-    <BigText2>
-      <ReactTextTransition
-        text="to your happy place"
-        spring={presets.molasses}
-        className="small"
-        delay={1700}
-        inline
-      />
-      <Button>
-        <nav>
-              Take me -->
-          <span />
-          <span />
-          <span />
-          <span />
-        </nav>
-      </Button>
-    </BigText2>
-  </div>
-)
->>>>>>> fbaf13e... edited button style, added login form, started register form
 
 export default Welcome
