@@ -6,20 +6,31 @@ import {withRouter} from 'react-router';
 
 
 const PositiveMessages = () => {
+
+  function getQuote() {
+    fetch('https://api.kanye.rest')
+        .then((resp) => resp.json())
+        .then(function (data) {
+            document.getElementById("quote").innerHTML = data.quote;
+        });
+  }
+
   return (
-  <div>
-    <BigText>
-      <ReactTextTransition
-        text="you "
-        spring={presets.molasses}
-        className="big"
-        delay={800}
-        inline
-      />
+    <div>
+      <BigText>
+        <ReactTextTransition
+                text="you "
+                spring={presets.molasses}
+                className="big"
+                delay={800}
+                inline
+              />
         beautiful.
-    </BigText>
-  </div>
-)
+      </BigText>
+      <button onClick={() => getQuote()}>🔄 Refresh</button>
+      <span id="quote"></span>
+    </div>
+  )
 }
 
 export default PositiveMessages
