@@ -1,13 +1,8 @@
 import React from 'react'
 import ReactTextTransition, { presets } from 'react-text-transition'
-import { BigText } from '../../UI/bigtext'
 import { Container } from './styles'
-<<<<<<< HEAD
 import { BigText } from '../../UI/bigtext.js'
-import ReactTextTransition, { presets } from "react-text-transition";
 import {withRouter} from 'react-router';
-=======
->>>>>>> fbaf13e... edited button style, added login form, started register form
 
 
 const PositiveMessages = () => (

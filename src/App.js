@@ -20,7 +20,6 @@ const AppWrapper = styled.div`
 `
 
 const App = () => (
-<<<<<<< HEAD
     <ThemeProvider theme={theme}>
       <AppWrapper>
         <ApolloProvider client={client}>
@@ -58,25 +57,6 @@ const App = () => (
         </ApolloProvider>
       </AppWrapper>
     </ThemeProvider>
-=======
-  <ThemeProvider theme={theme}>
-    <AppWrapper>
-      <ApolloProvider client={client}>
-        <div className="App">
-          <Navbar />
-          <Switch>
-            <Route path="/home" component={Home} />
-            <Route exact path="/" component={Welcome} />
-            <Route path="/friends" component={Friends} />
-            <Route path="/positiveMessages" component={PositiveMessages} />
-            <Route path="/logout" component={Logout} />
-          </Switch>
-          <ParticlesBackground />
-        </div>
-      </ApolloProvider>
-    </AppWrapper>
-  </ThemeProvider>
->>>>>>> fbaf13e... edited button style, added login form, started register form
 )
 
 export default App

@@ -4,6 +4,9 @@ import { NavLink as link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Show } from './styles'
+import Button from '../../UI/Button'
+import { BigText, BigText2 } from '../../UI/bigtext'
+
 
 
 const Welcome = () => {
@@ -51,11 +54,7 @@ const Welcome = () => {
           <br />
           <br />
           <Show>
-            <Button id='mybutton'>
-              <nav>
-                <a href="/home">Cheer me up!</a><span></span><span></span><span></span><span></span>
-              </nav>
-            </Button>
+            <Button text = 'Cheer me up!'id='mybutton' />
           </Show>
         </Col>
         <Col>
