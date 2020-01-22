@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactTextTransition, { presets } from 'react-text-transition'
-import { withRouter } from 'react-router'
-import { BigText, BigText2, BigText3 } from '../../UI/bigtext.js'
+import { Container, Row, Col } from 'react-bootstrap'
+
+import { BigText, BigText2, BigText3 } from '../../UI/bigtext'
 import { Show } from './styles'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Container, Row, Col } from 'react-bootstrap'
 import Button from '../../UI/Button'
 
 

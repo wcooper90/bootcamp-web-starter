@@ -68,6 +68,7 @@ const App = () => (
               </Switch>
             </div>
           </div>
+          </div>
         </ApolloProvider>
       </AppWrapper>
     </ThemeProvider>
