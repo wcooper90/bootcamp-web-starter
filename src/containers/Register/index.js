@@ -2,7 +2,9 @@
 /* eslint-disable no-console */
 import React, { useReducer } from 'react'
 import { useMutation } from '@apollo/react-hooks'
-import { RegisterContainer, RegisterError } from './styles'
+import {
+  RegisterContainer, RegisterError, Logo, RegisterTitle, LoginButton, HorizontalContainer,
+} from './styles'
 import { Input } from '../../UI/Input'
 import Button from '../../UI/Button'
 import { REGISTER } from './graphql'
@@ -35,6 +37,25 @@ const Register = () => {
 
   return (
     <RegisterContainer>
+      <Logo alt="logo" src="./cheermeuplogo.png" />
+      <RegisterTitle>Register</RegisterTitle>
+      <HorizontalContainer>
+        <Input
+          placeholder="First name"
+          value={registerForm.firstName}
+          onChange={e => {
+            setRegisterForm({ firstName: e.target.value })
+          }}
+        />
+        <Input
+          placeholder="Last name"
+          value={registerForm.lastName}
+          onChange={e => {
+            setRegisterForm({ lastName: e.target.value })
+          }}
+        />
+      </HorizontalContainer>
+
       <Input
         placeholder="Email"
         value={registerForm.email}
@@ -49,6 +70,13 @@ const Register = () => {
           setRegisterForm({ password: e.target.value })
         }}
       />
+      <Input
+        placeholder="Date of birth"
+        value={registerForm.dob}
+        onChange={e => {
+          setRegisterForm({ dob: e.target.value })
+        }}
+      />
       <Button
         text="Register"
         onClick={register}
@@ -58,6 +86,13 @@ const Register = () => {
         {error.graphQLErrors !== null && error.graphQLErrors.length > 0 ? error.graphQLErrors[0].message : error.message}
       </RegisterError>
       )}
+
+      <LoginButton onClick={() => {
+        window.location.href = '/login'
+      }}
+      >
+        Already have an account? Login.
+      </LoginButton>
     </RegisterContainer>
   )
 }
