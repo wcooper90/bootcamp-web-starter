@@ -2,7 +2,9 @@
 /* eslint-disable no-console */
 import React, { useState } from 'react'
 import { useMutation } from '@apollo/react-hooks'
-import { LoginContainer, LoginError } from './styles'
+import {
+  LoginContainer, LoginError, LoginTitle, Logo, RegisterButton,
+} from './styles'
 import { Input } from '../../UI/Input'
 import Button from '../../UI/Button'
 import { LOGIN } from './graphql'
@@ -29,6 +31,8 @@ const Login = () => {
 
   return (
     <LoginContainer>
+      <Logo alt="logo" src="./cheermeuplogo.png" />
+      <LoginTitle>Login</LoginTitle>
       <Input
         placeholder="Email"
         value={email}
@@ -52,6 +56,13 @@ const Login = () => {
         {error.graphQLErrors !== null && error.graphQLErrors.length > 0 ? error.graphQLErrors[0].message : error.message}
       </LoginError>
       )}
+      <RegisterButton onClick={() => {
+        window.location.href = '/register'
+      }}
+      >
+        Don't have an account yet? Register.
+      </RegisterButton>
+
     </LoginContainer>
   )
 }

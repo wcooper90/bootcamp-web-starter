@@ -1,21 +1,20 @@
 import React from 'react'
 import ReactTextTransition, { presets } from 'react-text-transition'
+import { withRouter } from 'react-router'
 import { BigText, BigText2, BigText3 } from '../../UI/bigtext.js'
-import {withRouter} from 'react-router';
 import { Show } from './styles'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Container, Row, Col } from 'react-bootstrap'
 import Button from '../../UI/Button'
 
 
 const PositiveMessages = () => {
-
   function getQuote() {
     fetch('https://api.kanye.rest')
-        .then((resp) => resp.json())
-        .then(function (data) {
-            document.getElementById("quote").innerHTML = data.quote;
-        });
+      .then(resp => resp.json())
+      .then(data => {
+        document.getElementById('quote').innerHTML = data.quote
+      })
   }
 
   return (
@@ -25,12 +24,12 @@ const PositiveMessages = () => {
           <Col>
             <BigText>
               <ReactTextTransition
-                      text="You "
-                      spring={presets.molasses}
-                      className="big"
-                      delay={300}
-                      inline
-                    />
+                text="You "
+                spring={presets.molasses}
+                className="big"
+                delay={300}
+                inline
+              />
               Beautiful.
             </BigText>
           </Col>
@@ -38,35 +37,35 @@ const PositiveMessages = () => {
         <Row>
           <Col>
             <BigText2>
-            <ReactTextTransition
-                    text="Have a Kanye quote."
-                    spring={presets.default}
-                    className="small"
-                    delay={1000}
-                  />
+              <ReactTextTransition
+                text="Have a Kanye quote."
+                spring={presets.default}
+                className="small"
+                delay={1000}
+              />
             </BigText2>
             <Show>
-              <Button id='mybutton' text='Refresh' onClick={() => getQuote()}></Button>
+              <Button id="mybutton" text="Refresh" onClick={() => getQuote()} />
             </Show>
             <BigText3>
               <Show>
-                  <span id="quote"></span>
+                <span id="quote" />
               </Show>
             </BigText3>
           </Col>
           <Col>
             <BigText2>
-            <ReactTextTransition
-                    text="Check messages from friends."
-                    spring={presets.default}
-                    className="small"
-                    delay={1700}
-                  />
+              <ReactTextTransition
+                text="Check messages from friends."
+                spring={presets.default}
+                className="small"
+                delay={1700}
+              />
             </BigText2>
             <Show>
-              <div class="jumbotron">
-                <table class='table'>
-                  <thead class="thead-dark">
+              <div className="jumbotron">
+                <table className="table">
+                  <thead className="thead-dark">
                     <tr>
                       <th scope="col">Name</th>
                       <th scope="col">Messages</th>

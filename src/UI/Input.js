@@ -9,7 +9,6 @@ export const Input = styled.input`
   transition: all 0.2s ease-out;
   outline: none;
   margin: 10px;
-  width: 400px;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.lightLilac};
