@@ -1,13 +1,18 @@
 import React from 'react'
+<<<<<<< HEAD
 import ReactTextTransition, { presets } from "react-text-transition";
 import {withRouter} from 'react-router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
+=======
+import ReactTextTransition, { presets } from 'react-text-transition'
+>>>>>>> fbaf13e... edited button style, added login form, started register form
+
+import { Container } from './styles'
 
 
-const Logout = () => {
-
+<<<<<<< HEAD
   return (
     <Container>
       <Row>
@@ -25,5 +30,19 @@ const Logout = () => {
     </Container>
   )
 }
+=======
+const Logout = () => (
+  <div>
+    <ReactTextTransition
+      text="bruh "
+      spring={presets.molasses}
+      className="big"
+      delay={800}
+      inline
+    />
+      you just logged out. you fool.
+  </div>
+)
+>>>>>>> fbaf13e... edited button style, added login form, started register form
 
-export default withRouter(Logout)
+export default Logout
