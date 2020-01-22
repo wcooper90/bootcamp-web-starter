@@ -24,6 +24,7 @@ const theme = {
       family: 'Courier New',
       weight: 400,
     },
+    family: 'Montserrat, sans-serif',
   },
 }
 
