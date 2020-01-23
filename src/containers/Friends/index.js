@@ -1,17 +1,15 @@
 import React from 'react'
-import { Container } from './styles'
-import {withRouter} from 'react-router';
+import MyFriends from './components/MyFriends'
+import { FriendsContainer } from './styles'
+import AddFriend from './components/AddFriend'
+import FriendRequests from './components/FriendRequests'
 
+const Friends = () => (
+  <FriendsContainer>
+    <MyFriends />
+    <AddFriend />
+    <FriendRequests />
+  </FriendsContainer>
+)
 
-
-const Friends = () => {
-  console.log('RANDOM MESSAGE')
-
-  return (
-    <div>
-      yeaint got a damn friend yet
-    </div>
-  )
-}
-
-export default withRouter(Friends)
+export default Friends
