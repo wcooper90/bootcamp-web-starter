@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useQuery } from '@apollo/react-hooks'
 import { BigText } from '../../UI/bigtext'
 import GetLaugh from './components/GetLaugh'
+import AddEntries from './components/AddEntries'
 // home page will have a gratitude journal and a 'get a laugh' section (preferably side-by-side?)
 // it might also have a positive news section
 
@@ -32,6 +33,7 @@ const Home = () => {
         />
       </BigText>
       <GetLaugh />
+      <AddEntries />
       {' '}
       {/* // This is just here to test that the GetLaugh Component works */}
       {/* // include the add entry component here
