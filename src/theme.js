@@ -9,6 +9,10 @@ const theme = {
     lilac: '#a48dd9',
     purple: '#7137c8',
     offBlack: '#333333',
+    green: '#5aa84a',
+    lightGreen: '#67d450',
+    red: '#b33920',
+    lightRed: '#e3654b',
     fonts: {
       header: '#333333',
       navlink: '#ffdb2d',

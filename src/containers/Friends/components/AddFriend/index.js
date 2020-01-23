@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import { Input } from '../../../../UI/Input'
-import { SearchFriendsContainer, AddFriendTitle } from './styles'
+import { AddFriendsContainer, AddFriendTitle } from './styles'
 import { SEARCH_USERS } from './graphql'
 import UserResult from './UserResult'
 
@@ -23,21 +23,21 @@ const AddFriend = () => {
   if (error) return 'Error!'
 
   return (
-    <SearchFriendsContainer>
+    <AddFriendsContainer>
       <AddFriendTitle>Add Friend</AddFriendTitle>
       <Input
         value={searchText}
-        placeholder="Search by name to add"
+        placeholder="Search by name to request"
         onChange={e => {
           setSearchText(e.target.value)
         }}
       />
       {
         searchResults.map(el => (
-          <UserResult firstName={el.firstName} lastName={el.lastName} />
+          <UserResult key={el.id} firstName={el.firstName} lastName={el.lastName} userId={el.id} />
         ))
       }
-    </SearchFriendsContainer>
+    </AddFriendsContainer>
   )
 }
 

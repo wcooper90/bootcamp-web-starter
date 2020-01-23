@@ -32,7 +32,7 @@ const MyFriends = () => {
     <MyFriendsContainer>
       <MyFriendsTitle>My Friends</MyFriendsTitle>
       {data.viewer.friends.map(el => (
-        <Friend firstName={el.firstName} lastName={el.lastName} email={el.email} />
+        <Friend key={el.id} firstName={el.firstName} lastName={el.lastName} email={el.email} />
       ))}
     </MyFriendsContainer>
   )

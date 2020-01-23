@@ -9,7 +9,7 @@ export const ButtonStyle = styled.button`
     font-size: 16px;
     border: 3px solid var(--c);
     border-radius: 0.5em;
-    width: 12em;
+    /*width: 12em;*/
     height: 3em;
     text-transform: uppercase;
     font-weight: bold;

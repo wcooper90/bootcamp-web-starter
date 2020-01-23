@@ -5,11 +5,9 @@ export const FriendContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   background-color: white;
-  width: 300px;
+  width: 250px;
   height: 70px;
-  margin: 10px;
-  border-radius: 7px;
-  padding: 10px;
+  padding: 15px;
 `
 
 export const Name = styled.p`
