@@ -1,17 +1,15 @@
 import gql from 'graphql-tag'
 
-// write query to get all journal entries
-
+// write a query to display all entries
 const GET_ENTRIES = gql`
     query {
         viewer {
             journalEntries {
+                id
                 text
                 date
             }
         }
     }
-
 `
-
 export default GET_ENTRIES

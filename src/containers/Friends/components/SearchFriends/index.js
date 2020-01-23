@@ -7,7 +7,6 @@ const SearchFriends = () => {
   // use the state hook to keep track of the current person the user is typing
   const [searchFriend, setSearchFriend] = useState('')
 
-
   return (
     <div>
 

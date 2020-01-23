@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactTextTransition, { presets } from 'react-text-transition'
 import { Container, Row, Col } from 'react-bootstrap'
-
 import { BigText, BigText2, BigText3 } from '../../UI/bigtext'
 import { Show } from './styles'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import Button from '../../UI/Button'
 
 

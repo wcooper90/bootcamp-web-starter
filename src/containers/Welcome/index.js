@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactTextTransition, { presets } from 'react-text-transition'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Show } from './styles'
 import Button from '../../UI/Button'

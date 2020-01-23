@@ -1,1 +1,1 @@
-// displays the user's list of friends 
+// displays the user's list of friends
