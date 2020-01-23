@@ -8,9 +8,7 @@ import Button from '../../UI/Button'
 import { BigText, BigText2 } from '../../UI/bigtext'
 
 
-
 const Welcome = () => {
-
 
   return (
     <div>
