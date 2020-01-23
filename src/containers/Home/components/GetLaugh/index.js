@@ -2,9 +2,9 @@
 import React from 'react'
 
 import ReactTextTransition, { presets } from 'react-text-transition'
-import { Container, Row, Col } from 'react-bootstrap'
 
-import { BigText, BigText2, BigText3 } from '../../../../UI/bigtext'
+import { BigText2, BigText3 } from '../../../../UI/bigtext'
+import { GetLaughContainer } from './styles'
 
 import { Show } from '../../../PositiveMessages/styles'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -23,12 +23,11 @@ const GetLaugh = () => {
 
 
   return (
-    <Container>
+    <GetLaughContainer>
       <BigText2>
         <ReactTextTransition
           text="Get a Laugh"
           spring={presets.default}
-          className="small"
           delay={1000}
         />
       </BigText2>
@@ -43,7 +42,7 @@ const GetLaugh = () => {
           <span id="punchline" />
         </Show>
       </BigText3>
-    </Container>
+    </GetLaughContainer>
   )
 }
 export default GetLaugh
