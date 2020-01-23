@@ -14,3 +14,29 @@ import gql from 'graphql-tag'
 // `
 
 // export default ADD_ENTRY
+
+export const ADD_ENTRY = gql`
+    mutation AddJournalEntry($txtInput: String!) {
+        addJournalEntry(text: $txtInput) {
+            id
+            userId
+            date
+            text
+        }
+    }
+`
+
+export const GET_ENTRIES = gql`
+    query Viewer{
+        viewer {
+            journalEntries {
+                id
+                userId
+                text
+                date
+            }
+        }
+    }
+
+`
+export default { ADD_ENTRY, GET_ENTRIES }
