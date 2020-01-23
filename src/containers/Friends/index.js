@@ -1,10 +1,13 @@
 import React from 'react'
 import MyFriends from './components/MyFriends'
-import { Container } from './styles'
-
+import { FriendsContainer } from './styles'
+import AddFriend from './components/AddFriend'
 
 const Friends = () => (
-  <MyFriends />
+  <FriendsContainer>
+    <MyFriends />
+    <AddFriend />
+  </FriendsContainer>
 )
 
 export default Friends
