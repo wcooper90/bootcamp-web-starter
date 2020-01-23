@@ -22,3 +22,13 @@ export const ADD_ENTRY = gql`
         }
     }
 `
+
+// // write a mutation to edit a new entry
+// export const EDIT_ENTRY = gql`
+//     mutation editJournalEntry($text: JournalEntry) {
+//         editJournalEntry(text: $text) {
+//             entryId
+//             text
+//         })
+//     }
+// `
