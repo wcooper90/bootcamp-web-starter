@@ -15,8 +15,7 @@ export const Text = styled.div`
 `
 
 export const Date = styled.div`
-    display: flex
-    font-family: ${({ theme }) => theme.fonts.family};
+    display: flex;
+    font-family: ${({ theme }) => theme.fonts.family}};
     font-size: 10px;
-  
 `

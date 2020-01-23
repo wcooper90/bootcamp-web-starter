@@ -1,7 +1,8 @@
 import React from 'react'
 import { EntryBox, Date, Text } from './styles'
 
-const Entry = ({ text, date }) => (
+// eslint-disable-next-line react/prop-types
+const NewEntry = ({ text, date }) => (
   <div>
     <EntryBox>
       <Text>{`${text}`}</Text>
@@ -10,4 +11,4 @@ const Entry = ({ text, date }) => (
   </div>
 )
 
-export default Entry
+export default NewEntry

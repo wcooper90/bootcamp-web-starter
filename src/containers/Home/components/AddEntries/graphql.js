@@ -15,7 +15,7 @@ export const GET_ENTRIES = gql`
 
 // write a mutation to create a new entry
 export const ADD_ENTRY = gql`
-    mutation addJournalEntry($text: JournalEntry) {
+    mutation addJournalEntry($text: String!) {
         addJournalEntry(text: $text) {
             text
             date

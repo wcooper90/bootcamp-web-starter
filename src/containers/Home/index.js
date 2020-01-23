@@ -4,7 +4,7 @@ import ReactTextTransition, { presets } from 'react-text-transition'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import { BigText } from '../../UI/bigtext'
 import DisplayEntries from './components/DisplayEntries'
-// import the add entry and get a laugh components
+import AddEntries from './components/AddEntries'
 
 const Home = () => (
   <div>
@@ -17,6 +17,7 @@ const Home = () => (
         inline
       />
     </BigText>
+    <AddEntries />
     <DisplayEntries />
   </div>
 )
