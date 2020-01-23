@@ -1,13 +1,12 @@
 import gql from 'graphql-tag'
 
-export const MY_FRIENDS = gql`
+export const FRIEND_REQUESTS = gql`
   query {
     viewer {
-      friends {
+      friendRequests {
         id
         firstName
         lastName
-        email
       }
     }
   }
