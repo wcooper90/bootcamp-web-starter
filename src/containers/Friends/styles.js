@@ -1,11 +1,7 @@
 import styled from 'styled-components'
 
 
-export const Container = styled.div`
-  height: 100px;
-  width: 100vw;
+export const FriendsContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: ${({ theme }) => theme.colors.lilac};
 `
