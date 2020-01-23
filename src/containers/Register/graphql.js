@@ -1,8 +1,8 @@
 import gql from 'graphql-tag'
 
 export const REGISTER = gql`
-  mutation ($registerInput: RegisterInput!) {
-    register (registerInput: $registerInput) {
+  mutation ($input: RegisterInput!) {
+    register (input: $input) {
       token
       user {
         id

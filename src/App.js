@@ -7,7 +7,7 @@ import client from './client'
 import Home from './containers/Home'
 import Navbar from './containers/Navbar'
 import Friends from './containers/Friends'
-import Logout from './containers/logout'
+import Register from './containers/Register'
 import Welcome from './containers/Welcome'
 import PositiveMessages from './containers/PositiveMessages'
 import ParticlesBackground from './UI/particles.js'
@@ -26,33 +26,48 @@ const App = () => (
           <div className="App">
           <div
             style={{
-              position: "absolute",
+              position: 'absolute',
               top: 0,
               left: 0,
-              width: "100%",
-              height: "100%"
+              width: '100%',
+              height: '100%',
             }}
           >
             <ParticlesBackground />
             <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%"
-                }}
-              >
-                <Navbar />
-                <Switch>
-                  <Route path="/home" component={Home} />
-                  <Route exact path="/" component={Welcome} />
-                  <Route path="/friends" component={Friends} />
-                  <Route path="/positiveMessages" component={PositiveMessages} />
-                  <Route path="/logout" component={Logout} />
-                </Switch>
-              </div>
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            >
+              <Switch>
+                <Route exact path="/">
+                  <Welcome />
+                </Route>
+                <Route path="/home">
+                  <Navbar />
+                  <Home />
+                </Route>
+                <Route path="/friends">
+                  <Navbar />
+                  <Friends />
+                </Route>
+                <Route path="/positiveMessages">
+                  <Navbar />
+                  <PositiveMessages />
+                </Route>
+                <Route path="/login">
+                  <Login />
+                </Route>
+                <Route path="/register">
+                  <Register />
+                </Route>
+              </Switch>
             </div>
+          </div>
           </div>
         </ApolloProvider>
       </AppWrapper>
