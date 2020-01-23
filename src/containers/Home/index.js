@@ -5,6 +5,7 @@ import ReactTextTransition, { presets } from 'react-text-transition'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useQuery } from '@apollo/react-hooks'
 import { BigText } from '../../UI/bigtext'
+import GetLaugh from './components/GetLaugh'
 // home page will have a gratitude journal and a 'get a laugh' section (preferably side-by-side?)
 // it might also have a positive news section
 
@@ -30,6 +31,9 @@ const Home = () => {
           inline
         />
       </BigText>
+      <GetLaugh />
+      {' '}
+      {/* // This is just here to test that the GetLaugh Component works */}
       {/* // include the add entry component here
             // map over all the entries data
 
