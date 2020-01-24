@@ -1,5 +1,5 @@
 // use api to display jokes
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import ReactTextTransition, { presets } from 'react-text-transition'
 
@@ -12,28 +12,40 @@ import Button from '../../../../UI/Button'
 
 
 const GetNews = () => {
+  const [news, setNews] = useState([])
+  const [newsIterator, setNewsIterator] = useState(0)
 
-  var news = [];
-  var newsIterator = 0;
+  const [newsReady, setNewsReady] = useState(false)
+  const [hasClicked, setHasClicked] = useState(false)
 
-  fetch('https://happy-news-nmnepmqeqo.now.sh')
-    .then(resp => resp.json())
-    .then(data => {
-      news = data;
-    })
+  useEffect(() => {
+    fetch('https://happy-news-nmnepmqeqo.now.sh')
+      .then(resp => resp.json())
+      .then(data => {
+        setNews(data)
+        if (hasClicked) {
+          document.getElementById('title').innerHTML = news[newsIterator].title
+          setNewsIterator(newsIterator + 1)
+        }
+        setNewsReady(true)
+      })
+  }, [])
 
-  function getGoodNews() {
 
-    document.getElementById('title').innerHTML = news[newsIterator].title
-    newsIterator += 1;
+  const getGoodNews = () => {
+    setHasClicked(true)
+    if (newsReady) {
+      document.getElementById('title').innerHTML = news[newsIterator].title
+      setNewsIterator(newsIterator + 1)
 
-    if (newsIterator === 14) {
-      fetch('https://happy-news-nmnepmqeqo.now.sh')
-        .then(resp => resp.json())
-        .then(data => {
-          news = data;
-        })
-      newsIterator = 0;
+      if (newsIterator === 14) {
+        fetch('https://happy-news-nmnepmqeqo.now.sh')
+          .then(resp => resp.json())
+          .then(data => {
+            setNews(data)
+          })
+        setNewsIterator(0)
+      }
     }
   }
 
@@ -48,7 +60,7 @@ const GetNews = () => {
         />
       </BigText2>
       <Show>
-        <Button id="newsButton" text="Good News" onClick={() => getGoodNews()} />
+        <Button id="newsButton" text="Get some news" onClick={getGoodNews} />
       </Show>
       <BigText3>
         <Show>
