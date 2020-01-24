@@ -6,7 +6,7 @@ import { BigText, BigText2, BigText3 } from '../../UI/bigtext'
 import { Show } from './styles'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Button from '../../UI/Button'
-import ReadMessages from './components/ReadSendMessages'
+import ReadMessages from './components/ReadMessage'
 
 
 const PositiveMessages = () => {
