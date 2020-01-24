@@ -7,6 +7,11 @@ import { GET_MESSAGES } from './graphql'
 const ReadMessages = () => {
   const { loading: getMessagesLoading, error: getMessagesError, data: getMessagesData } = useQuery(GET_MESSAGES)
 
+  const [sendMessage, { error, loading }] = useMutation(SEND_MESSAGE, {
+    variables: { txtInput: entry },
+    refetchQueries: () => [{ query: GET_MESSAGES }],
+  })
+
 
   if (getMessagesLoading) return 'Loading...'
   if (getMessagesError) return `Error: ${getMessagesError}`
