@@ -21,5 +21,17 @@ export const GET_MESSAGES = gql`
 }
 `
 
+export const SEND_MESSAGE = gql`
+    mutation sendMessage($input: String!) {
+        sendMessage(input: $input) {
+            id 
+            content
+            dateSent
+            receiver
+            sender
+        }
+    }
+`
 
-export default { GET_MESSAGES }
+
+export default { GET_MESSAGES, SEND_MESSAGE }

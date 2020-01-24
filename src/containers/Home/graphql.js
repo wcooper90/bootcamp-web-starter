@@ -1,8 +1,8 @@
 import gql from 'graphql-tag'
 
-// write query to get all journal entries 
+// write query to get all journal entries
 
-// sample query: 
+// sample query:
 // const GET_ENTRIES = gql`
 //     query {
 //         allEntries {
