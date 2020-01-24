@@ -67,6 +67,7 @@ const Welcome = () => {
       </Row>
     </Container>
   </div>
-)
+  )
+}
 
 export default Welcome

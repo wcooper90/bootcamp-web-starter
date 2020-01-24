@@ -4,6 +4,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import GetLaugh from './components/GetLaugh'
 import AddEntries from './components/AddEntries'
+import GetNews from './components/GoodNews'
 import { HomeContainer } from './styles'
 // home page will have a gratitude journal and a 'get a laugh' section (preferably side-by-side?)
 // it might also have a positive news section
@@ -17,6 +18,7 @@ const Home = () => (
 
     <GetLaugh />
     <AddEntries />
+    <GetNews />
     {' '}
     {/* // This is just here to test that the GetLaugh Component works */}
     {/* // include the add entry component here
