@@ -10,7 +10,7 @@ import Friends from './containers/Friends'
 import Register from './containers/Register'
 import Welcome from './containers/Welcome'
 import PositiveMessages from './containers/PositiveMessages'
-import ParticlesBackground from './UI/particles.js'
+import ParticlesBackground from './UI/particles'
 import Login from './containers/Login'
 
 const AppWrapper = styled.div`
@@ -20,10 +20,10 @@ const AppWrapper = styled.div`
 `
 
 const App = () => (
-    <ThemeProvider theme={theme}>
-      <AppWrapper>
-        <ApolloProvider client={client}>
-          <div className="App">
+  <ThemeProvider theme={theme}>
+    <AppWrapper>
+      <ApolloProvider client={client}>
+        <div className="App">
           <div
             style={{
               position: 'absolute',
@@ -68,10 +68,10 @@ const App = () => (
               </Switch>
             </div>
           </div>
-          </div>
-        </ApolloProvider>
-      </AppWrapper>
-    </ThemeProvider>
+        </div>
+      </ApolloProvider>
+    </AppWrapper>
+  </ThemeProvider>
 )
 
 export default App

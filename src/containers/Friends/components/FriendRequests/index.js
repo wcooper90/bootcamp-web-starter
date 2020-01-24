@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable no-console */
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import { FriendRequestsContainer, Title } from './styles'

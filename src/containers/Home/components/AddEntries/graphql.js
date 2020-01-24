@@ -26,8 +26,31 @@ export const ADD_ENTRY = gql`
     }
 `
 
+export const UPDATE_ENTRY = gql`
+    mutation editJournalEntry($entryId: ID, $text: String!) {
+        editJournalEntry(entryId: $entryId, text: $text) {
+            id
+            date
+            text
+        }
+    }
+`
+
+export const GET_CURRENT_ENTRY = gql`
+    query Viewer {
+        viewer {
+            currentJournalEntry {
+                id
+                userId
+                text
+                date
+            }
+        }
+    }
+`
+
 export const GET_ENTRIES = gql`
-    query Viewer{
+    query Viewer {
         viewer {
             journalEntries {
                 id
@@ -39,4 +62,3 @@ export const GET_ENTRIES = gql`
     }
 
 `
-export default { ADD_ENTRY, GET_ENTRIES }

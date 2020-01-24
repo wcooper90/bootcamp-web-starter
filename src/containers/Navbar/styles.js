@@ -8,6 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   background: ${({ theme }) => theme.colors.lilac};
+  box-shadow: 0 2px 4px gray;
 `
 
 export const NavLink = styled(link).attrs(({ theme }) => ({
