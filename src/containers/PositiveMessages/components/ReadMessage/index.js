@@ -5,7 +5,7 @@ import { useQuery, useMutation } from '@apollo/react-hooks'
 import { GET_MESSAGES, SEND_MESSAGE } from './graphql'
 import Message from './Message'
 
-const Messages = () => {
+const ReadMessages = () => {
   const { loading: getMessagesLoading, error: getMessagesError, data: getMessagesData } = useQuery(GET_MESSAGES)
 
   const [message, setMessage] = useState('')
@@ -33,4 +33,4 @@ const Messages = () => {
   )
 }
 
-export default Messages
+export default ReadMessages
