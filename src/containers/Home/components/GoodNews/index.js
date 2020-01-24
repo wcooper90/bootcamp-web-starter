@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import ReactTextTransition, { presets } from 'react-text-transition'
 
 import { BigText2, BigText3 } from '../../../../UI/bigtext'
-import { Container } from './styles'
+import { Container, NewsImg } from './styles'
 
 import { Show } from '../../../PositiveMessages/styles'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -13,6 +13,7 @@ import Button from '../../../../UI/Button'
 
 const GetNews = () => {
   const [news, setNews] = useState([])
+  const [imgURL, setImgURL] = useState('')
   const [newsIterator, setNewsIterator] = useState(0)
 
   const [newsReady, setNewsReady] = useState(false)
@@ -25,6 +26,7 @@ const GetNews = () => {
         setNews(data)
         if (hasClicked) {
           document.getElementById('title').innerHTML = news[newsIterator].title
+          setImgURL(news[newsIterator].image)
           setNewsIterator(newsIterator + 1)
         }
         setNewsReady(true)
@@ -36,6 +38,7 @@ const GetNews = () => {
     setHasClicked(true)
     if (newsReady) {
       document.getElementById('title').innerHTML = news[newsIterator].title
+      setImgURL(news[newsIterator].image)
       setNewsIterator(newsIterator + 1)
 
       if (newsIterator === 14) {
@@ -66,6 +69,7 @@ const GetNews = () => {
         <Show>
           <span id="title" />
         </Show>
+        {imgURL !== '' && <NewsImg alt="Good news" src={imgURL} />}
       </BigText3>
     </Container>
   )

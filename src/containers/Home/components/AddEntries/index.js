@@ -72,7 +72,7 @@ const AddEntries = () => {
 
       <div style={{ margin: '30px' }} />
       <Title>Previous Entries</Title>
-      {entryData.viewer.journalEntries.map(el => {
+      {entryData.viewer.journalEntries.sort((a, b) => b.date - a.date).map(el => {
         console.log(el)
         return (
           <JournalEntry key={el.id} text={el.text} unixDate={el.date} />
