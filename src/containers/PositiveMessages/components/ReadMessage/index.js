@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
-import { GET_MESSAGES, GET_NAME } from './graphql'
+import { GET_MESSAGES } from './graphql'
 
 const ReadMessages = () => {
   const { loading: getMessagesLoading, error: getMessagesError, data: getMessagesData } = useQuery(GET_MESSAGES)
